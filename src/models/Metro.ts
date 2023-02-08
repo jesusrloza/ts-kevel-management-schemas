@@ -7,9 +7,3 @@ export const MetroSchema = z.object({
 })
 
 export type MetroSchema = z.infer<typeof MetroSchema>
-
-export interface Metro {
-  name?: string
-  code?: string
-  regionCodes?: Array<string> | null
-}

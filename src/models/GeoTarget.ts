@@ -9,11 +9,3 @@ export const GeoTargetSchema = z.object({
 })
 
 export type GeoTargetSchema = z.infer<typeof GeoTargetSchema>
-
-export interface GeoTarget {
-  countryCode?: string
-  region?: string
-  metroCode?: number
-  isExclude?: boolean | null
-  locationId?: number | null
-}

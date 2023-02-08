@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { Zone, ZoneSchema } from '..'
+import { ZoneSchema } from './Zone'
 
 export const ZoneListSchema = z.object({
   page: z.number().optional(),
@@ -10,11 +10,3 @@ export const ZoneListSchema = z.object({
 })
 
 export type ZoneListSchema = z.infer<typeof ZoneListSchema>
-
-export interface ZoneList {
-  page?: number
-  pageSize?: number
-  totalPages?: number
-  totalItems?: number
-  items?: Array<Zone>
-}

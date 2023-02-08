@@ -8,11 +8,3 @@ export const SiteZoneSchema = z.object({
   FlightId: z.number().optional().nullable(),
 })
 export type SiteZoneSchema = z.infer<typeof SiteZoneSchema>
-
-export interface SiteZone {
-  id?: number | null
-  isExcluded?: boolean
-  siteId?: number
-  zoneId?: number
-  flightId?: number | null
-}

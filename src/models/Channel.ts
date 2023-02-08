@@ -13,15 +13,3 @@ export const ChannelSchema = z.object({
 })
 
 export type ChannelSchema = z.infer<typeof ChannelSchema>
-
-export interface Channel {
-  title?: string
-  adTypes?: Array<number>
-  isDeleted?: boolean | null
-  engine?: string | null
-  cPM?: number
-  id?: number | null
-  commission?: number | null
-  customTargeting?: string | null
-  keywords?: string | null
-}

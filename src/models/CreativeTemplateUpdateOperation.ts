@@ -9,9 +9,3 @@ export const CreativeTemplateUpdateOperationSchema = z.object({
 })
 
 export type CreativeTemplateUpdateOperationSchema = z.infer<typeof CreativeTemplateUpdateOperationSchema>
-
-export interface CreativeTemplateUpdateOperation {
-  path?: object
-  op?: string
-  value?: object
-}

@@ -9,7 +9,6 @@ export const PrioritySchema = z.object({
   isAuction: z.boolean().optional(),
   isDeleted: z.boolean().optional(),
   selectionAlgorithm: SelectionAlgorithmEnum.optional(),
-  // selectionAlgorithm: z.number().optional(),
   channelId: z.number().optional().nullable(),
   weight: z.number().optional().nullable(),
   id: z.number().optional().nullable(),
@@ -23,23 +22,3 @@ export const PrioritySchema = z.object({
 })
 
 export type PrioritySchema = z.infer<typeof PrioritySchema>
-
-export interface Priority {
-  name?: string
-  isAdChainOptimized?: boolean
-  isAdChainOrdered?: boolean
-  isAdChain?: boolean
-  isAuction?: boolean
-  isDeleted?: boolean
-  selectionAlgorithm?: number
-  channelId?: number | null
-  weight?: number | null
-  id?: number | null
-  isSecondPricing?: boolean | null
-  passbackTimeout?: number | null
-  relevancyScoreConfig?: string | null
-  serializeRelevancyScoreConfigJSON?: boolean | null
-  isKeywordOptimized?: boolean | null
-  floorPrice?: number | null
-  relevancyScoreConfigJSON?: string | null
-}

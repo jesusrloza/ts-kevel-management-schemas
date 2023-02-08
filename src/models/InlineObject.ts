@@ -1,3 +1,3 @@
-// export interface InlineObject {
-//   file?: Blob
-// }
+export interface InlineObject {
+  file?: Blob
+}

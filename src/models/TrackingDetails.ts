@@ -7,8 +7,3 @@ export const TrackingDetailsSchema = z.object({
 })
 
 export type TrackingDetailsSchema = z.infer<typeof TrackingDetailsSchema>
-export interface TrackingDetails {
-  id?: number
-  staticClickUrl?: string
-  impressionPixelUrl?: string
-}

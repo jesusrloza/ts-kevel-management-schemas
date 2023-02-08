@@ -5,7 +5,3 @@ export const TrackingPixelSchema = z.object({
 })
 
 export type TrackingPixelSchema = z.infer<typeof TrackingPixelSchema>
-
-export interface TrackingPixel {
-  trackingCode?: string
-}

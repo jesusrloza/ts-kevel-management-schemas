@@ -8,10 +8,3 @@ export const ChannelSiteMapSchema = z.object({
 })
 
 export type ChannelSiteMapSchema = z.infer<typeof ChannelSiteMapSchema>
-
-export interface ChannelSiteMap {
-  siteId?: number
-  channelId?: number
-  priority?: number | null
-  fixedPaymentAmount?: number | null
-}

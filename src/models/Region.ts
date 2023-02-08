@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { Metro, MetroSchema } from './Metro'
+import { MetroSchema } from './Metro'
 
 export const RegionSchema = z.object({
   name: z.string().optional(),
@@ -9,10 +9,3 @@ export const RegionSchema = z.object({
 })
 
 export type RegionSchema = z.infer<typeof RegionSchema>
-
-export interface Region {
-  name?: string
-  code?: string
-  countryCode?: string
-  metros?: { [key: string]: Metro } | null
-}

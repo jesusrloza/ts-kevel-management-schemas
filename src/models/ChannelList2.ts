@@ -5,7 +5,3 @@ export const ChannelList2Schema = z.object({
 })
 
 export type ChannelList2Schema = z.infer<typeof ChannelList2Schema>
-
-export interface ChannelList2 {
-  channelIds?: Array<number>
-}

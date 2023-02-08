@@ -1,6 +1,6 @@
 import { z } from 'zod'
-import { CreativeTemplateContents, CreativeTemplateContentsSchema } from './CreativeTemplateContents'
-import { CreativeTemplateField, CreativeTemplateFieldSchema } from './CreativeTemplateField'
+import { CreativeTemplateContentsSchema } from './CreativeTemplateContents'
+import { CreativeTemplateFieldSchema } from './CreativeTemplateField'
 
 export const CreativeTemplateSchema = z.object({
   name: z.string(),
@@ -12,12 +12,3 @@ export const CreativeTemplateSchema = z.object({
 })
 
 export type CreativeTemplateSchema = z.infer<typeof CreativeTemplateSchema>
-
-export interface CreativeTemplate {
-  name: string
-  description: string
-  id?: number | null
-  isArchived?: boolean
-  fields?: Array<CreativeTemplateField>
-  contents?: Array<CreativeTemplateContents>
-}

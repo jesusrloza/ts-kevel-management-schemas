@@ -1,7 +1,7 @@
-import { Region } from './Region'
+import { RegionSchema } from './Region'
 
 export interface Country {
   name?: string
   code?: string
-  regions?: { [key: string]: Region } | null
+  regions?: { [key: string]: RegionSchema } | null
 }

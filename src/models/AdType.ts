@@ -8,10 +8,3 @@ export const AdTypeSchema = z.object({
 })
 
 export type AdTypeSchema = z.infer<typeof AdTypeSchema>
-
-export interface AdType {
-  id?: number | null
-  width?: number
-  height?: number
-  name?: string | null
-}

@@ -7,9 +7,3 @@ export const BehavioralTargetOnClickSchema = z.object({
 })
 
 export type BehavioralTargetOnClickSchema = z.infer<typeof BehavioralTargetOnClickSchema>
-
-export interface BehavioralTargetOnClick {
-  stopShowingAdsFromFlight?: boolean | null
-  stopShowingAdsFromAdvertiser?: boolean | null
-  storeCategoriesFromFlightAsInterest?: boolean | null
-}

@@ -10,12 +10,3 @@ export const SiteSchema = z.object({
 })
 
 export type SiteSchema = z.infer<typeof SiteSchema>
-
-export interface Site {
-  id?: number | null
-  title?: string
-  url?: string
-  networkMargin?: number | null
-  isDeleted?: boolean | null
-  publisherAccountId?: number | null
-}

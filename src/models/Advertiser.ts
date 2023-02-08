@@ -19,20 +19,3 @@ export const AdvertiserSchema = z.object({
 })
 
 export type AdvertiserSchema = z.infer<typeof AdvertiserSchema>
-
-export interface Advertiser {
-  title: string
-  isActive: boolean
-  placementLimit?: number | null
-  freqCap?: number | null
-  freqCapDuration?: number | null
-  freqCapType?: number | null
-  capType?: number | null
-  dailyCapAmount?: number | null
-  lifetimeCapAmount?: number | null
-  isDeleted?: boolean
-  isFreqCap?: boolean | null
-  rtbCustomFields?: string | null
-  partnerId?: number | null
-  id?: number | null
-}

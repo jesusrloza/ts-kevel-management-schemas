@@ -5,7 +5,6 @@ export const CreativeTemplateFieldSchema = z.object({
   name: z.string().optional(),
   variable: z.string().optional(),
   type: CreativeTemplateFieldTypeEnum.optional(),
-  // type: z.string().optional(),
   required: z.boolean().optional(),
   description: z.string().optional(),
   hidden: z.boolean().optional(),
@@ -13,13 +12,3 @@ export const CreativeTemplateFieldSchema = z.object({
 })
 
 export type CreativeTemplateFieldSchema = z.infer<typeof CreativeTemplateFieldSchema>
-
-export interface CreativeTemplateField {
-  name?: string
-  variable?: string
-  type?: string
-  required?: boolean
-  description?: string
-  hidden?: boolean
-  _default?: object
-}

@@ -8,9 +8,3 @@ export const ZoneSchema = z.object({
 })
 
 export type ZoneSchema = z.infer<typeof ZoneSchema>
-export interface Zone {
-  id?: number | null
-  name?: string
-  siteId?: number
-  isDeleted?: boolean | null
-}

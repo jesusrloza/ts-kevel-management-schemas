@@ -8,10 +8,3 @@ export const ListSchema = z.object({
 })
 
 export type ListSchema = z.infer<typeof ListSchema>
-
-export interface List {
-  page?: number
-  pageSize?: number
-  totalPages?: number
-  totalItems?: number
-}

@@ -6,8 +6,3 @@ export const FlightCategorySchema = z.object({
 })
 
 export type FlightCategorySchema = z.infer<typeof FlightCategorySchema>
-
-export interface FlightCategory {
-  name?: string
-  id?: number | null
-}

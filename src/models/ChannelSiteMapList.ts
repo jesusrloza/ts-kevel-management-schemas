@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { ChannelSiteMap, ChannelSiteMapSchema } from './ChannelSiteMap'
+import { ChannelSiteMapSchema } from './ChannelSiteMap'
 
 export const ChannelSiteMapListSchema = z.object({
   page: z.number().optional(),
@@ -10,11 +10,3 @@ export const ChannelSiteMapListSchema = z.object({
 })
 
 export type ChannelSiteMapListSchema = z.infer<typeof ChannelSiteMapListSchema>
-
-export interface ChannelSiteMapList {
-  page?: number
-  pageSize?: number
-  totalPages?: number
-  totalItems?: number
-  items?: Array<ChannelSiteMap>
-}

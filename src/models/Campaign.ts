@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { Flight, FlightSchema } from './Flight'
+import { FlightSchema } from './Flight'
 import { CapTypeEnum, FrequencyCapTypeEnum } from './base/enums'
 
 export const CampaignSchema = z.object({
@@ -27,27 +27,3 @@ export const CampaignSchema = z.object({
 })
 
 export type CampaignSchema = z.infer<typeof CampaignSchema>
-
-export interface Campaign {
-  advertiserId: number
-  name: string
-  startDate: string
-  flights?: Array<Flight> | null
-  isActive?: boolean
-  isDeleted?: boolean
-  isArchived?: boolean | null
-  freqCap?: number | null
-  freqCapDuration?: number | null
-  freqCapType?: number | null
-  dontAffectParentFreqCap?: boolean | null
-  capType?: number | null
-  dailyCapAmount?: number | null
-  lifetimeCapAmount?: number | null
-  id?: number | null
-  customFieldsJson?: string | null
-  endDate?: string | null
-  isFreqCap?: boolean | null
-  endDateISO?: string | null
-  price?: number | null
-  startDateISO?: string | null
-}

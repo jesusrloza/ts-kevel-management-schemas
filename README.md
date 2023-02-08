@@ -1,13 +1,4 @@
-
 # ts-kevel-management-schemas
-
-[![npm package][npm-img]][npm-url]
-[![Build Status][build-img]][build-url]
-[![Downloads][downloads-img]][downloads-url]
-[![Issues][issues-img]][issues-url]
-[![Code Coverage][codecov-img]][codecov-url]
-[![Commitizen Friendly][commitizen-img]][commitizen-url]
-[![Semantic Release][semantic-release-img]][semantic-release-url]
 
 > My awesome module
 
@@ -20,10 +11,25 @@ npm install ts-kevel-management-schemas
 ## Usage
 
 ```ts
-import { myPackage } from 'ts-kevel-management-schemas';
+import { CampaignSchema } from '@jesusrloza/ts-kevel-management-schemas'
 
-myPackage('hello');
-//=> 'hello from my package'
+// use CampaignSchema as a type
+const campaign: CampaignSchema = {
+  AdvertiserId: 0,
+  Name: 'Test campaign',
+  IsActive: true,
+  CapType: 1,
+}
+
+// or as a data validator
+const result = CampaignSchema.safeParse(campaign)
+
+if (result.success) {
+  console.log(result.data)
+  // => { AdvertiserId: 0, Name: 'Test campaign', IsActive: true, CapType: 1 }
+} else {
+  console.log(result.error)
+}
 ```
 
 ## API
@@ -46,4 +52,3 @@ Type: `string`
 Default: `rainbows`
 
 Lorem ipsum.
-

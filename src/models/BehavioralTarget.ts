@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { BehavioralTargetOnClick, BehavioralTargetOnClickSchema } from './BehavioralTargetOnClick'
+import { BehavioralTargetOnClickSchema } from './BehavioralTargetOnClick'
 
 export const BehavioralTargetSchema = z.object({
   onClick: BehavioralTargetOnClickSchema.optional(),
@@ -7,8 +7,3 @@ export const BehavioralTargetSchema = z.object({
 })
 
 export type BehavioralTargetSchema = z.infer<typeof BehavioralTargetSchema>
-
-export interface BehavioralTarget {
-  onClick?: BehavioralTargetOnClick
-  onConvert?: BehavioralTargetOnClick
-}

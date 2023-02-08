@@ -5,7 +5,3 @@ export const AdvertiserSearchSchema = z.object({
 })
 
 export type AdvertiserSearchSchema = z.infer<typeof AdvertiserSearchSchema>
-
-export interface AdvertiserSearch {
-  advertiserName?: string
-}

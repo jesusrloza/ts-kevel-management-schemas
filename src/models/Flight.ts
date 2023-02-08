@@ -1,8 +1,8 @@
 import { z } from 'zod'
-import { Ad, AdSchema } from './Ad'
-import { BehavioralTarget, BehavioralTargetSchema } from './BehavioralTarget'
-import { GeoTarget, GeoTargetSchema } from './GeoTarget'
-import { SiteZone, SiteZoneSchema } from './SiteZone'
+import { AdSchema } from './Ad'
+import { BehavioralTargetSchema } from './BehavioralTarget'
+import { GeoTargetSchema } from './GeoTarget'
+import { SiteZoneSchema } from './SiteZone'
 import {
   CapTypeEnum,
   DeliveryStatusEnum,
@@ -78,68 +78,3 @@ export const FlightSchema = z.object({
 })
 
 export type FlightSchema = z.infer<typeof FlightSchema>
-
-export interface Flight {
-  name: string
-  startDateISO: Date
-  campaignId: number
-  priorityId: number
-  goalType: number
-  impressions: number
-  isActive: boolean
-  id?: number | null
-  endDateISO?: Date | null
-  noEndDate?: boolean | null
-  isDeleted?: boolean
-  rateType?: number | null
-  price?: number | null
-  capType?: number | null
-  dailyCapAmount?: number | null
-  dailyCapAmountDecimal?: number | null
-  lifetimeCapAmount?: number | null
-  lifetimeCapAmountDecimal?: number | null
-  keywords?: string | null
-  customTargeting?: string | null
-  customFieldsJson?: string | null
-  isFreqCap?: boolean | null
-  freqCap?: number | null
-  freqCapDuration?: number | null
-  freqCapType?: number | null
-  dontAffectParentFreqCap?: boolean | null
-  isCompanion?: boolean | null
-  isNoDuplicates?: boolean | null
-  duplicateMode?: number | null
-  deliveryStatus?: number | null
-  isTrackingConversions?: boolean | null
-  canPassback?: boolean | null
-  passbackSortOrder?: number | null
-  isECPMOptimized?: boolean | null
-  eCPMOptimizePeriod?: number | null
-  eCPMMultiplier?: number | null
-  floorECPM?: number | null
-  ceilingECPM?: number | null
-  defaultECPM?: number | null
-  eCPMBurnInImpressions?: number | null
-  effectiveCPMOverride?: number | null
-  datePartingStartTimeISO?: Date | null
-  datePartingEndTimeISO?: Date | null
-  isSunday?: boolean | null
-  isMonday?: boolean | null
-  isTuesday?: boolean | null
-  isWednesday?: boolean | null
-  isThursday?: boolean | null
-  isFriday?: boolean | null
-  isSaturday?: boolean | null
-  isArchived?: boolean | null
-  behavioralTargeting?: BehavioralTarget
-  geoTargeting?: Array<GeoTarget> | null
-  siteZoneTargeting?: Array<SiteZone> | null
-  requireStrictLocation?: boolean | null
-  creativeMaps?: Array<Ad> | null
-  isTargetingOptimization?: boolean | null
-  targetingOptimizationType?: number | null
-  targetingOptimizationTargetType?: number | null
-  targetingOptimizationTarget?: number | null
-  targetingOptimizationBurnIn?: number | null
-  targetingOptimizationCanMiss?: boolean | null
-}

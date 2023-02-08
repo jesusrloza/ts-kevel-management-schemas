@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { CreativeSchema, Creative } from './Creative'
+import { CreativeSchema } from './Creative'
 import { DistributionTypeEnum, FrequencyCapTypeEnum, GoalTypeEnum } from './base/enums'
 
 export const AdSchema = z.object({
@@ -34,34 +34,3 @@ export const AdSchema = z.object({
 })
 
 export type AdSchema = z.infer<typeof AdSchema>
-
-export interface Ad {
-  campaignId: number | null
-  creative: Creative
-  flightId: number | null
-  id?: number | null
-  isActive: boolean | null
-  rtbCustomFields?: string | null
-  activeKeywords?: Array<string> | null
-  customTargeting?: string | null
-  distributionType?: number
-  percentage?: number | null
-  impressions?: number | null
-  siteId?: number | null
-  zoneId?: number | null
-  isDeleted?: boolean | null
-  iframe?: boolean | null
-  sizeOverride?: boolean | null
-  isStartEndDateOverride?: boolean | null
-  startDateISO?: Date | null
-  endDateISO?: Date | null
-  isGoalOverride?: boolean | null
-  goalType?: number | null
-  goal?: number | null
-  isNetworkAd?: boolean | null
-  isNoTrack?: boolean | null
-  dontAffectParentFreqCap?: boolean | null
-  freqCap?: number | null
-  freqCapDuration?: number | null
-  freqCapType?: number | null
-}
