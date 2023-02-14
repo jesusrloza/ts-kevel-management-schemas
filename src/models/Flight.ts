@@ -12,16 +12,23 @@ import {
   RateTypeEnum,
 } from './base/enums'
 
+const dateSchema = z.string().refine((value) => {
+  const dateRegex = /^\d{4}-\d{2}-\d{2}$/
+  const dateTimeRegex = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(.\d{3})?Z?$/
+
+  return dateRegex.test(value) || dateTimeRegex.test(value)
+}, 'Expected a date or date-time string in the format YYYY-MM-DD or YYYY-MM-DDTHH:mm:ss.sssZ')
+
 export const FlightSchema = z.object({
   Name: z.string(),
-  StartDateISO: z.string().datetime().optional().nullable(),
+  StartDateISO: dateSchema.optional().nullable(),
   CampaignId: z.number(),
   PriorityId: z.number(),
   GoalType: GoalTypeEnum,
   Impressions: z.number(),
   IsActive: z.boolean().default(false),
   Id: z.number().optional().nullable(),
-  EndDateISO: z.date().optional().nullable(),
+  EndDateISO: dateSchema.optional().nullable(),
   NoEndDate: z.boolean().optional().nullable(),
   IsDeleted: z.boolean().optional(),
   RateType: RateTypeEnum.optional().nullable(),
