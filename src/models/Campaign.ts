@@ -3,13 +3,14 @@ import { FlightSchema } from './Flight'
 import { CapTypeEnum, FrequencyCapTypeEnum } from './base/enums'
 
 export const CampaignSchema = z.object({
+  Id: z.number().optional(),
   AdvertiserId: z.number(),
   Name: z.string(),
   StartDate: z.string().optional(),
-  Flights: z.array(FlightSchema).optional(),
+  Flights: z.array(FlightSchema).default([]),
   IsActive: z.boolean().default(false),
   IsDeleted: z.boolean().optional(),
-  IsArchived: z.boolean().optional().nullable(),
+  IsArchived: z.boolean().optional(),
   FreqCap: z.number().optional().nullable(),
   FreqCapDuration: z.number().optional().nullable(),
   FreqCapType: FrequencyCapTypeEnum.optional().nullable(),
@@ -17,7 +18,6 @@ export const CampaignSchema = z.object({
   CapType: CapTypeEnum.default(4).nullable(),
   DailyCapAmount: z.number().optional().nullable(),
   LifetimeCapAmount: z.number().optional().nullable(),
-  Id: z.number().optional().nullable(),
   CustomFieldsJson: z.string().optional().nullable(),
   EndDate: z.string().optional().nullable(),
   IsFreqCap: z.boolean().optional().nullable(),

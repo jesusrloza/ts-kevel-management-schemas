@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "build": "tsc --project tsconfig.build.json",
+    "clean": "rm -rf ./lib/",
     "fix": "prettier --write ./src/",
     "semantic-release": "semantic-release",
     "test:debug": "node --nolazy --inspect-brk ./node_modules/jest/bin/jest.js --runInBand  --colors --verbose",
