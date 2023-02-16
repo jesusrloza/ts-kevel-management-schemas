@@ -1,11 +1,8 @@
 import { z } from 'zod'
+import { ListSchema } from './base/List'
 import { ZoneSchema } from './Zone'
 
-export const ZoneListSchema = z.object({
-  page: z.number().optional(),
-  pageSize: z.number().optional(),
-  totalPages: z.number().optional(),
-  totalItems: z.number().optional(),
+export const ZoneListSchema = ListSchema.extend({
   items: z.array(ZoneSchema).optional(),
 })
 

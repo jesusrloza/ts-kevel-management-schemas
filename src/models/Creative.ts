@@ -4,7 +4,7 @@ export const CreativeSchema = z.object({
   AdvertiserId: z.number().nullable(),
   AdTypeId: z.number().nullable(),
   IsActive: z.boolean(),
-  Id: z.number().optional().nullable(),
+  Id: z.number().optional(),
   Title: z.string().optional().nullable(),
   ImageName: z.string().optional().nullable(),
   Body: z.string().default(''),

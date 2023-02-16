@@ -1,7 +1,7 @@
 import { z } from 'zod'
 
 export const SiteZoneSchema = z.object({
-  Id: z.number().optional().nullable(),
+  Id: z.number().optional(),
   IsExcluded: z.boolean().optional(),
   SiteId: z.number().optional(),
   ZoneId: z.number().optional(),

@@ -3,12 +3,12 @@ import { CreativeTemplateContentsSchema } from './CreativeTemplateContents'
 import { CreativeTemplateFieldSchema } from './CreativeTemplateField'
 
 export const CreativeTemplateSchema = z.object({
-  name: z.string(),
-  description: z.string(),
-  id: z.number().optional().nullable(),
-  isArchived: z.boolean().optional(),
-  fields: z.array(CreativeTemplateFieldSchema).optional(),
-  contents: z.array(CreativeTemplateContentsSchema).optional(),
+  Name: z.string(),
+  Description: z.string(),
+  Id: z.number().optional(),
+  IsArchived: z.boolean().optional(),
+  Fields: z.array(CreativeTemplateFieldSchema).optional(),
+  Contents: z.array(CreativeTemplateContentsSchema).optional(),
 })
 
 export type CreativeTemplateSchema = z.infer<typeof CreativeTemplateSchema>

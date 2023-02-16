@@ -1,8 +1,8 @@
 import { z } from 'zod'
 
 export const FlightCategorySchema = z.object({
-  name: z.string().optional(),
-  id: z.number().optional().nullable(),
+  Name: z.string().optional(),
+  Id: z.number().optional(),
 })
 
 export type FlightCategorySchema = z.infer<typeof FlightCategorySchema>

@@ -27,7 +27,7 @@ export const FlightSchema = z.object({
   GoalType: GoalTypeEnum,
   Impressions: z.number(),
   IsActive: z.boolean().default(false),
-  Id: z.number().optional().nullable(),
+  Id: z.number().optional(),
   EndDateISO: dateSchema.optional().nullable(),
   NoEndDate: z.boolean().optional().nullable(),
   IsDeleted: z.boolean().optional(),

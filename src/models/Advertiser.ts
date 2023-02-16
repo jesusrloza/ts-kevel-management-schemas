@@ -15,7 +15,7 @@ export const AdvertiserSchema = z.object({
   IsFreqCap: z.boolean().optional().nullable(),
   RtbCustomFields: z.string().optional().nullable(),
   PartnerId: z.number().optional().nullable(),
-  Id: z.number().optional().nullable(),
+  Id: z.number().optional(),
 })
 
 export type AdvertiserSchema = z.infer<typeof AdvertiserSchema>

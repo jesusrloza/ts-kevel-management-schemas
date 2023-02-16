@@ -1,11 +1,8 @@
 import { z } from 'zod'
+import { ListSchema } from './base/List'
 import { ChannelSiteMapSchema } from './ChannelSiteMap'
 
-export const ChannelSiteMapListSchema = z.object({
-  page: z.number().optional(),
-  pageSize: z.number().optional(),
-  totalPages: z.number().optional(),
-  totalItems: z.number().optional(),
+export const ChannelSiteMapListSchema = ListSchema.extend({
   items: z.array(ChannelSiteMapSchema).optional(),
 })
 

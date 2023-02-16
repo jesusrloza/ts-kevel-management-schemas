@@ -1,15 +1,15 @@
 import { z } from 'zod'
 
 export const ChannelSchema = z.object({
-  title: z.string().optional(),
-  adTypes: z.array(z.number()).optional(),
-  isDeleted: z.boolean().optional().nullable(),
-  engine: z.string().optional().nullable(),
-  cPM: z.number().optional(),
-  id: z.number().optional().nullable(),
-  commission: z.number().optional().nullable(),
-  customTargeting: z.string().optional().nullable(),
-  keywords: z.string().optional().nullable(),
+  Title: z.string().optional(),
+  AdTypes: z.array(z.number()).optional(),
+  IsDeleted: z.boolean().optional().nullable(),
+  Engine: z.string().optional().nullable(),
+  CPM: z.number().optional(),
+  Id: z.number().optional(),
+  Commission: z.number().optional().nullable(),
+  CustomTargeting: z.string().optional().nullable(),
+  Keywords: z.string().optional().nullable(),
 })
 
 export type ChannelSchema = z.infer<typeof ChannelSchema>

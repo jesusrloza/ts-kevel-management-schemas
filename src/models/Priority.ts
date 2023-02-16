@@ -11,7 +11,7 @@ export const PrioritySchema = z.object({
   selectionAlgorithm: SelectionAlgorithmEnum.optional(),
   channelId: z.number().optional().nullable(),
   weight: z.number().optional().nullable(),
-  id: z.number().optional().nullable(),
+  id: z.number().optional(),
   isSecondPricing: z.boolean().optional().nullable(),
   passbackTimeout: z.number().optional().nullable(),
   relevancyScoreConfig: z.string().optional().nullable(),

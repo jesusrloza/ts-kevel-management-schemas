@@ -6,7 +6,7 @@ export const AdSchema = z.object({
   CampaignId: z.number().nullable(),
   Creative: CreativeSchema,
   FlightId: z.number().nullable(),
-  Id: z.number().optional().nullable(),
+  Id: z.number().optional(),
   IsActive: z.boolean().default(false),
   RtbCustomFields: z.string().optional().nullable(),
   ActiveKeywords: z.array(z.string()).optional(),
