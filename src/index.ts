@@ -1,3 +1,5 @@
+export * from './models/base/List'
+export * from './models/base/enums'
 export * from './models/Ad'
 export * from './models/AdList'
 export * from './models/AdType'
