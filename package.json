@@ -1,6 +1,6 @@
 {
   "name": "@jesusrloza/ts-kevel-management-schemas",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A package that that provides a set of Zod schemas for describing the shape of objects in the Kevel Management API.",
   "main": "./lib/index.js",
   "files": [
