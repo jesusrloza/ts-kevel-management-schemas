@@ -1,6 +1,7 @@
 import { z } from 'zod'
 import { FlightSchema } from './Flight'
 import { CapTypeEnum, FrequencyCapTypeEnum } from './base/enums'
+import { DateSchema } from './base/Date'
 
 export const CampaignSchema = z.object({
   Id: z.number().optional(),
@@ -21,9 +22,9 @@ export const CampaignSchema = z.object({
   CustomFieldsJson: z.string().optional().nullable(),
   EndDate: z.string().optional().nullable(),
   IsFreqCap: z.boolean().optional().nullable(),
-  EndDateISO: z.string().optional().nullable(),
+  EndDateISO: DateSchema.optional().nullable(),
   Price: z.number().optional().nullable(),
-  StartDateISO: z.string().optional().nullable(),
+  StartDateISO: DateSchema.optional().nullable(),
 })
 
 export type CampaignSchema = z.infer<typeof CampaignSchema>

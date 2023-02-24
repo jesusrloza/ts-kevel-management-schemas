@@ -42,6 +42,7 @@ const FrequencyCapType = {
   Hour: 1,
   Day: 2,
   Minute: 3,
+  Default: 0,
 } as const
 export const FrequencyCapTypeEnum = z.nativeEnum(FrequencyCapType)
 export type FrequencyCapTypeEnum = z.infer<typeof FrequencyCapTypeEnum>

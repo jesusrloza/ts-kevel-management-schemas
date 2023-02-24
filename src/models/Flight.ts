@@ -11,24 +11,18 @@ import {
   GoalTypeEnum,
   RateTypeEnum,
 } from './base/enums'
-
-const dateSchema = z.string().refine((value) => {
-  const dateRegex = /^\d{4}-\d{2}-\d{2}$/
-  const dateTimeRegex = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(.\d{3})?Z?$/
-
-  return dateRegex.test(value) || dateTimeRegex.test(value)
-}, 'Expected a date or date-time string in the format YYYY-MM-DD or YYYY-MM-DDTHH:mm:ss.sssZ')
+import { DateSchema } from './base/Date'
 
 export const FlightSchema = z.object({
   Name: z.string(),
-  StartDateISO: dateSchema.optional().nullable(),
+  StartDateISO: DateSchema.optional().nullable(),
   CampaignId: z.number(),
   PriorityId: z.number(),
   GoalType: GoalTypeEnum,
   Impressions: z.number(),
   IsActive: z.boolean().default(false),
   Id: z.number().optional(),
-  EndDateISO: dateSchema.optional().nullable(),
+  EndDateISO: DateSchema.optional().nullable(),
   NoEndDate: z.boolean().optional().nullable(),
   IsDeleted: z.boolean().optional(),
   RateType: RateTypeEnum.optional().nullable(),
@@ -63,13 +57,13 @@ export const FlightSchema = z.object({
   EffectiveCPMOverride: z.number().optional().nullable(),
   DatePartingStartTimeISO: z.date().optional().nullable(),
   DatePartingEndTimeISO: z.date().optional().nullable(),
-  IsSunday: z.boolean().optional(),
-  IsMonday: z.boolean().optional(),
-  IsTuesday: z.boolean().optional(),
-  IsWednesday: z.boolean().optional(),
-  IsThursday: z.boolean().optional(),
-  IsFriday: z.boolean().optional(),
-  IsSaturday: z.boolean().optional(),
+  IsSunday: z.boolean().optional().nullable(),
+  IsMonday: z.boolean().optional().nullable(),
+  IsTuesday: z.boolean().optional().nullable(),
+  IsWednesday: z.boolean().optional().nullable(),
+  IsThursday: z.boolean().optional().nullable(),
+  IsFriday: z.boolean().optional().nullable(),
+  IsSaturday: z.boolean().optional().nullable(),
   IsArchived: z.boolean().optional(),
   BehavioralTargeting: BehavioralTargetSchema.optional(),
   GeoTargeting: z.array(GeoTargetSchema).optional(),

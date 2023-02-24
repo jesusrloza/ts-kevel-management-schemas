@@ -1,6 +1,7 @@
 import { z } from 'zod'
 import { CreativeSchema } from './Creative'
 import { DistributionTypeEnum, FrequencyCapTypeEnum, GoalTypeEnum } from './base/enums'
+import { DateSchema } from './base/Date'
 
 export const AdSchema = z.object({
   CampaignId: z.number().nullable(),
@@ -20,8 +21,8 @@ export const AdSchema = z.object({
   Iframe: z.boolean().optional().nullable(),
   SizeOverride: z.boolean().default(false),
   IsStartEndDateOverride: z.boolean().optional().nullable(),
-  StartDateISO: z.string().datetime().optional().nullable(),
-  EndDateISO: z.string().datetime().optional().nullable(),
+  StartDateISO: DateSchema.optional().nullable(),
+  EndDateISO: DateSchema.optional().nullable(),
   IsGoalOverride: z.boolean().optional().nullable(),
   GoalType: GoalTypeEnum.optional().nullable(),
   Goal: z.number().optional().nullable(),
