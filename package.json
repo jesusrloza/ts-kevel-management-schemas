@@ -3,16 +3,16 @@
   "version": "1.0.14",
   "description": "A package that that provides a set of Zod schemas for describing the shape of objects in the Kevel Management API.",
   "private": false,
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "main": "./lib/index.js",
+  "module": "./lib/index.mjs",
+  "types": "./lib/index.d.ts",
   "files": [
-    "dist/**/*"
+    "lib/**/*"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "build": "tsup src/index.ts --format cjs,esm --dts --out-dir lib",
     "ci": "pnpm run lint && pnpm run test && pnpm run build",
-    "clean": "rm -rf ./dist/",
+    "clean": "rm -rf ./lib/",
     "fix": "prettier --write ./src/",
     "lint": "tsc",
     "release": "pnpm run ci && changeset publish",
@@ -22,16 +22,20 @@
     "version:init": "pnpm changeset init",
     "version": "pnpm changeset"
   },
+  "homepage": "https://github.com/jesusrloza/ts-kevel-management-schemas#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jesusrloza/ts-kevel-management-schemas.git"
   },
-  "license": "Apache-2.0",
   "author": {
     "name": "Jesus R. Loza",
     "email": "jesusrloza@users.noreply.github.com",
     "url": "https://github.com/jesusrloza"
   },
+  "bugs": {
+    "url": "https://github.com/jesusrloza/ts-kevel-management-schemas/issues"
+  },
+  "license": "Apache-2.0",
   "engines": {
     "node": ">=16.0"
   },
@@ -43,10 +47,6 @@
     "schemas",
     "jest"
   ],
-  "bugs": {
-    "url": "https://github.com/jesusrloza/ts-kevel-management-schemas/issues"
-  },
-  "homepage": "https://github.com/jesusrloza/ts-kevel-management-schemas#readme",
   "devDependencies": {
     "@changesets/cli": "^2.26.0",
     "@types/jest": "^29.4.0",
@@ -59,7 +59,7 @@
     "typescript": "^4.9.5"
   },
   "dependencies": {
-    "zod": "^3.20.2"
+    "zod": "^3.21.3"
   },
   "release": {
     "branches": [
