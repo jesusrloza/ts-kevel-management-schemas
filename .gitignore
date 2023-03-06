@@ -120,4 +120,4 @@ lib/
 
 # Prevent dependency conflicts
 package-lock.json
-pnpm-lock.yaml
+# pnpm-lock.yaml
