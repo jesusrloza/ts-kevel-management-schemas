@@ -14,6 +14,7 @@ import {
 import { DateSchema } from './base/Date'
 
 export const FlightSchema = z.object({
+  Id: z.number().optional(),
   Name: z.string(),
   StartDateISO: DateSchema.optional().nullable(),
   CampaignId: z.number(),
@@ -21,7 +22,6 @@ export const FlightSchema = z.object({
   GoalType: GoalTypeEnum,
   Impressions: z.number(),
   IsActive: z.boolean().default(false),
-  Id: z.number().optional(),
   EndDateISO: DateSchema.optional().nullable(),
   NoEndDate: z.boolean().optional().nullable(),
   IsDeleted: z.boolean().optional(),
@@ -65,17 +65,18 @@ export const FlightSchema = z.object({
   IsFriday: z.boolean().optional().nullable(),
   IsSaturday: z.boolean().optional().nullable(),
   IsArchived: z.boolean().optional(),
-  BehavioralTargeting: BehavioralTargetSchema.optional().nullable(),
-  GeoTargeting: z.array(GeoTargetSchema).optional().nullable(),
-  SiteZoneTargeting: z.array(SiteZoneSchema).optional().nullable(),
   RequireStrictLocation: z.boolean().optional().nullable(),
-  CreativeMaps: z.array(AdSchema).optional().nullable(),
+  TimeZone: z.string().optional(),
   IsTargetingOptimization: z.boolean().optional().nullable(),
   TargetingOptimizationType: z.number().optional().nullable(),
   TargetingOptimizationTargetType: z.number().optional().nullable(),
   TargetingOptimizationTarget: z.number().optional().nullable(),
   TargetingOptimizationBurnIn: z.number().optional().nullable(),
   TargetingOptimizationCanMiss: z.boolean().optional().nullable(),
+  BehavioralTargeting: BehavioralTargetSchema.optional().nullable(),
+  GeoTargeting: z.array(GeoTargetSchema).optional().nullable(),
+  SiteZoneTargeting: z.array(SiteZoneSchema).optional().nullable(),
+  CreativeMaps: z.array(AdSchema).optional().nullable(),
 })
 
 export type FlightSchema = z.infer<typeof FlightSchema>
