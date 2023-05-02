@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts --out-dir lib",
-    "ci": "pnpm run lint && pnpm run test && pnpm run build",
+    "ci": "pnpm run clean && pnpm run lint && pnpm run test && pnpm run build",
     "clean": "rm -rf ./lib/",
     "fix": "prettier --write ./src/",
     "lint": "tsc",
