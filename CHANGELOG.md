@@ -1,5 +1,11 @@
 # @jesusrloza/ts-kevel-management-schemas
 
+## 1.0.17
+
+### Patch Changes
+
+- a59d912: Added properties missing from the docs on create/get campaign and flight
+
 ## 1.0.16
 
 ### Patch Changes
