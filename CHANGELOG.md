@@ -1,5 +1,11 @@
 # @jesusrloza/ts-kevel-management-schemas
 
+## 1.0.18
+
+### Patch Changes
+
+- 8837999: Bug fix: start/end dates (not iso) on campaign and flight response do not conform to DateSchema
+
 ## 1.0.17
 
 ### Patch Changes
