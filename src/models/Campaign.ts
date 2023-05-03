@@ -25,7 +25,7 @@ export const CampaignSchema = z.object({
   LifetimeCapAmount: z.number().optional().nullable(),
   Name: z.string(),
   Price: z.number().optional().nullable(),
-  StartDate: z.string().optional(),
+  StartDate: z.string().optional().nullable(),
   StartDateISO: DateSchema.optional().nullable(),
   Version: z.number().optional().nullable(),
 })
