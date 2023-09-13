@@ -1,5 +1,11 @@
 # @jesusrloza/ts-kevel-management-schemas
 
+## 1.0.19
+
+### Patch Changes
+
+- 20da852: Added treeshaking to reduce bundle size, replaced jest with vitest
+
 ## 1.0.18
 
 ### Patch Changes
