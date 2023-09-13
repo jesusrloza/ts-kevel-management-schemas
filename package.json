@@ -16,9 +16,9 @@
     "format": "prettier --write ./src/ ./test/",
     "lint": "tsc",
     "release": "pnpm run ci && changeset publish",
+    "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "test:debug": "vitest run --inspect-brk --no-threads",
-    "test": "vitest run",
     "version:init": "pnpm changeset init",
     "version": "pnpm changeset"
   },

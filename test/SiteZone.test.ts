@@ -1,7 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { SiteZoneSchema } from '../src/models/SiteZone'
-import invalidSiteZones from './examples/invalidSiteZones.json'
-import validSiteZones from './examples/validSiteZones.json'
+import { invalidSiteZones, validSiteZones } from './examples/siteZones'
 
 describe('SiteZoneSchema', () => {
   it('should validate a valid SiteZone object', () => {
