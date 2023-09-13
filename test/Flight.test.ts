@@ -1,6 +1,7 @@
+import { describe, expect, it } from 'vitest'
 import { FlightSchema } from '../src/models/Flight'
-import validFlights from './examples/validFlights.json'
 import invalidFlights from './examples/invalidFlights.json'
+import validFlights from './examples/validFlights.json'
 
 describe('FlightSchema', () => {
   it('should validate a valid Flight object', () => {

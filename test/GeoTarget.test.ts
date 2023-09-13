@@ -1,6 +1,7 @@
+import { describe, expect, it } from 'vitest'
 import { GeoTargetSchema } from '../src/models/GeoTarget'
-import validGeoTargets from './examples/validGeoTargets.json'
 import invalidGeoTargets from './examples/invalidGeoTargets.json'
+import validGeoTargets from './examples/validGeoTargets.json'
 
 describe('GeoTargetSchema', () => {
   it('should validate a valid GeoTarget object', () => {

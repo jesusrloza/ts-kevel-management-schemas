@@ -1,6 +1,7 @@
+import { describe, expect, it } from 'vitest'
 import { CreativeSchema } from '../src/models/Creative'
-import validCreatives from './examples/validCreatives.json'
 import invalidCreatives from './examples/invalidCreatives.json'
+import validCreatives from './examples/validCreatives.json'
 
 describe('CreativeSchema', () => {
   it('should validate a valid Creative object', () => {

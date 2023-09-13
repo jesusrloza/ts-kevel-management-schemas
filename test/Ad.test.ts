@@ -1,6 +1,7 @@
+import { describe, expect, it } from 'vitest'
 import { AdSchema } from '../src/models/Ad'
-import validAds from './examples/validAds.json'
 import invalidAds from './examples/invalidAds.json'
+import validAds from './examples/validAds.json'
 
 describe('AdSchema', () => {
   it('should validate a valid Ad object', () => {

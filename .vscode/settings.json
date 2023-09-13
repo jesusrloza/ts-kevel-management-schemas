@@ -1,7 +1,10 @@
 {
+  "cSpell.words": ["Dont", "ECPM", "jesusrloza", "Loza", "Passback", "ROAS", "treeshake", "tsup"],
   "editor.formatOnSave": true,
+  "files.autoSave": "onFocusChange",
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "cSpell.words": ["Dont", "ECPM", "jesusrloza", "Loza", "Passback", "ROAS", "tsup"]
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true
+  }
 }
